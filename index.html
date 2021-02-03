@@ -20,15 +20,17 @@
       <hr class="my-4">
       <p>Half-giant jinxes peg-leg gillywater broken glasses large black dog Great Hall. Nearly-Headless Nick now string them together, and answer me this, which creature would you be unwilling to kiss?</p>
       <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Sorting Hat</a>
+        <a class="btn btn-primary btn-lg" href="#" role="sortingHatButton">Sorting Hat</a>
       </p>
     </div>
     <form>
-      <div class="form-group col-lg-2 text-center">
-        <input type="text" class="form-control" placeholder="Name">
+      <div  class="form-group col-lg-2 text-center">
+        <label for="studentName" class="form-label">Enter First Year's Name!</label>
+        <input type="text" class="form-control" placeholder="Name" id="studentName">
       </div>
-      <button type="submit" class="btn btn-primary mb-2">Sort!</button>
+      <button type="submit" class="btn btn-primary mb-2" id="sortButton">Sort!</button>
     </form>
+    <div class="card" id="studentcard"></div>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
