@@ -1,21 +1,18 @@
 const studentArray = [
-  {
-    studentName: 'Ben',
-    house: 'Ravenclaw',
-  },
-  {
-    studentName: 'Nathan',
-    house: 'Gryffindor',
-  },
-  {
-    studentName: 'Honey-Rae',
-    house: 'Slytherin',
-  },
 ];
 
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.querySelector(divId)
   selectedDiv.innerHTML = textToPrint;
+}
+
+function formFunction () {
+  const formIsHidden = document.querySelector("#hiddenForm");
+  if (formIsHidden.style.display === "none") {
+    formIsHidden.style.display = "block";
+  } else {
+    formIsHidden.style.display = "none";
+  }
 }
 
 const createStudentCards = () => {
@@ -51,7 +48,6 @@ const sortEvent = (e) => {
 }
 
 const init = () => {
-  createStudentCards();
   sortEvent();
   
 }
