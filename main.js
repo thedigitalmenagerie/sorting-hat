@@ -1,7 +1,5 @@
 const studentArray = [];
 
-const expelledArray = [];
-
 const hogHouse = ['Gryffindor', 'Slytherin', 'Hufflepuff', 'Ravenclaw'];
 
 const printToDom = (divId, textToPrint) => {
@@ -17,7 +15,10 @@ const handleSortEvent = (e) => {
   e.preventDefault();
   const studentName = document.querySelector('#studentName').value;
   const house = hogHouse[Math.floor(Math.random() * hogHouse.length)];
-  const id = studentArray.length ? studentArray[studentArray.length -1] + 1: 1;
+  const uniqueIds = studentArray
+  .map((student) => student.id)
+
+  const id = uniqueIds.length ? uniqueIds[uniqueIds.length -1] + 1: 1;
 
   const nameIntoObj = {
     studentName,
@@ -25,7 +26,7 @@ const handleSortEvent = (e) => {
     id,
   }
   studentArray.push(nameIntoObj);
-  createStudentCards(studentArray);
+  createStudentCards(uniqueIds);
   document.querySelector('#hiddenForm').reset();
 }
 
