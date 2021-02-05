@@ -1,7 +1,8 @@
-const studentArray = [
-];
+const studentArray = [];
 
+const expelledArray = [];
 
+const hogHouse = ['Gryffindor', 'Slytherin', 'Hufflepuff', 'Ravenclaw'];
 
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.querySelector(divId)
@@ -9,12 +10,23 @@ const printToDom = (divId, textToPrint) => {
 }
 
 function formFunction () {
-  const formIsHidden = document.querySelector("#hiddenForm");
-  if (formIsHidden.style.display === "none") {
-    formIsHidden.style.display = "block";
-  } else {
-    formIsHidden.style.display = "none";
+  document.querySelector("#hiddenForm").style.display = 'block';
   }
+
+const handleSortEvent = (e) => {
+  e.preventDefault();
+  const studentName = document.querySelector('#studentName').value;
+  const house = hogHouse[Math.floor(Math.random() * hogHouse.length)];
+  const id = studentArray.length ? studentArray[studentArray.length -1] + 1: 1;
+
+  const nameIntoObj = {
+    studentName,
+    house,
+    id,
+  }
+  studentArray.push(nameIntoObj);
+  createStudentCards(studentArray);
+  document.querySelector('#hiddenForm').reset();
 }
 
 const createStudentCards = () => {
@@ -32,31 +44,33 @@ const createStudentCards = () => {
   printToDom('#studentCard', domString);
 }
 
-const handleSortEvent = (e) => {
-  e.preventDefault();
-  const studentName = document.querySelector('#studentName').value;
-  const hogHouse = ['Gryffindor', 'Slytherin', 'Hufflepuff', 'Ravenclaw'];
-  const house = hogHouse[Math.floor(Math.random() * hogHouse.length)];
-  const id = 0;
 
-  const nameIntoObj = {
-    studentName,
-    house,
-    id,
+
+
+const expelStudent = (e) => {
+  const targetType = e.target.type;
+  const targetId = Number(e.target.id);
+
+    if (targetType === "button") { 
+      const indexOfStudent = studentArray.findIndex((studentArray) => studentArray.id === targetId);
+      studentArray.splice(indexOfStudent, 1);
+    }
+
+    createStudentCards(studentArray);
   }
-  studentArray.push(nameIntoObj);
-  createStudentCards(studentArray);
-}
 
 
 const sortEvent = (e) => {
   document.querySelector('#sortButton').addEventListener('click', handleSortEvent);
 }
 
+const expelStudentEvent = (e) => {
+  document.querySelector('#studentCard').addEventListener('click', expelStudent);
+}
 
 const init = () => {
   sortEvent();
-  createStudentCards(studentArray);
+  expelStudentEvent();
 }
 
 init();
