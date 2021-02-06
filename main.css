@@ -1,7 +1,26 @@
+
 body {
-  background-color: aliceblue;
+  background-color: black;
+}
+
+h1 {
+  color: goldenrod;
+}
+
+p {
+  color: goldenrod;
+}
+
+label {
+  color: goldenrod;
 }
 
 form {
   display: none;
+  margin-left: 515px;
+  text: center;
+}
+
+.card {
+  background-color: black;
 }

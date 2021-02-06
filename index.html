@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -14,27 +15,29 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div class="jumbotron">
-      <h1 class="display-4">Hogwarts House</h1>
-      <p class="lead">Boggarts lavender robes, Hermione Granger Fantastic Beasts and Where to Find Them. Bee in your bonnet Hand of Glory elder wand, spectacles House Cup Bertie Bott’s Every Flavor Beans Impedimenta. Stunning spells tap-dancing spider Slytherin’s Heir mewing kittens Remus Lupin. Palominos scarlet train black robes, Metamorphimagus Niffler dead easy second bedroom. Padma and Parvati Sorting Hat Minister of Magic blue turban remember my last.</p>
-      <hr class="my-4">
-      <p>Half-giant jinxes peg-leg gillywater broken glasses large black dog Great Hall. Nearly-Headless Nick now string them together, and answer me this, which creature would you be unwilling to kiss?</p>
+    <div class="jumbotron d-flex flex-column justify-content-center">
+      <h1 class="display-4 text-center my-sm-3">Hogwarts House</h1>
+      <p class="lead mx-sm-5 flex-wrap">Boggarts lavender robes, Hermione Granger Fantastic Beasts and Where to Find Them. Bee in your bonnet Hand of Glory elder wand, spectacles House Cup Bertie Bott’s Every Flavor Beans Impedimenta. Stunning spells tap-dancing spider Slytherin’s Heir mewing kittens Remus Lupin. Palominos scarlet train black robes, Metamorphimagus Niffler dead easy second bedroom. Padma and Parvati Sorting Hat Minister of Magic blue turban remember my last.</p>
+      <hr class="my-5">
+      <p class="mx-sm-5 flex-wrap">Half-giant jinxes peg-leg gillywater broken glasses large black dog Great Hall. Nearly-Headless Nick now string them together, and answer me this, which creature would you be unwilling to kiss?</p>
       <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="sortingHatButton" onclick="formFunction()">Sorting Hat</a>
+        <div class="text-center">
+          <a class="btn btn-warning btn-lg" href="#" role="sortingHatButton" onclick="formFunction()">Sorting Hat</a>
+        </div>
+        
       </p>
     </div>
     <form id="hiddenForm">
-      <div  class="form-group col-lg-2 text-center">
+      <div  class="form-group col-lg-2 text-center align-content-center">
         <label for="studentName" class="form-label">Enter First Year's Name!</label>
         <input type="text" class="form-control" placeholder="Name" id="studentName">
       </div>
-      <button type="submit" class="btn btn-primary mb-2" id="sortButton">Sort!</button>
+      <div class="m-4"><button type="submit" class="btn btn-warning mb-2" id="sortButton">Sort!</button></div>
     </form>
-    <div class="card" id="studentCard"></div>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+    <div class="card d-flex text-center flex-row flex-wrap justify-content-around" id="studentCard"></div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="main.js" async defer></script>
   </body>
 </html>
+s

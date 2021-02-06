@@ -33,11 +33,11 @@ const handleSortEvent = (e) => {
 const createStudentCards = () => {
   let domString = '';
   studentArray.forEach((item, i) => {
-  domString += `<div class="card" style="width: 18rem;" id=${item.id}>
+  domString += `<div class="card mt-4 mb-4" style="width: 18rem;" id=${item.id}>
     <div class="card-body">
-    <h5 class="card-title">First-Year Student: ${item.studentName}</h5>
-    <p class="card-text" id="house">Hogwarts House: ${item.house}</p>
-    <button href="#" class="btn btn-primary" type="button" id=${item.id}>Expel!</button>
+    <h5 class="card-title text-warning">First-Year Student: ${item.studentName}</h5>
+    <p class="card-text text-warning" id="house">Hogwarts House: ${item.house}</p>
+    <button href="#" class="btn btn-warning" type="button" id=${item.id}>Expel!</button>
   </div>
 </div>`;
   })
