@@ -27,7 +27,7 @@ Expel Button
 
 - Screenshots of your project
 
-
+<a href="https://ibb.co/BqST0fx"><img src="https://i.ibb.co/XSvFcWg/Screen-Shot-2021-02-08-at-1-01-58-PM.png" alt="Screen-Shot-2021-02-08-at-1-01-58-PM" border="0"></a>
 
 - List of contributors and links to their GH profiles
 
@@ -35,4 +35,4 @@ https://github.com/thedigitalmenagerie
 
 - Link to Loom video walkthrough of your app 
 
-https://www.loom.com/share/9577dee25b9d48909af45884e8c11b53
+https://www.loom.com/share/475ebb0bc7a144778d8315e8341071e3
