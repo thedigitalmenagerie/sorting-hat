@@ -1,20 +1,22 @@
 - Name of the Project
+  
 Sorting Hat 
+
 - Overview of the project
 
-Create a form where user can enter name and be sorted into a house!
+Create a form where user can be required to enter name and be sorted into a house!
 
 - Link to the deployed project (will learn in week 5)
 
 https://hrswansorting-hat.netlify.app/
 
-- Link to your project board (yes...even though it is a part of the repo)
+- Link to project board 
 
 https://github.com/thedigitalmenagerie/sorting-hat/projects
 
 - Description of the user
 
-Upon load user will see a sorting hat button. Upon pressing the button, user will see hidden form displayed with a name input and a sort button. Upon pressing the sort button, user will see a card generated with entered name and generated house name. 
+Upon load user will see a sorting hat button. Upon pressing the button, user will see hidden form displayed with a name input and a sort button. Upon pressing the sort button, user will see a card generated with entered name and generated house name. If name input is left blank, instead of a card, user will see an error message with instructions on how to close.
 
 - List of features
 
@@ -25,14 +27,14 @@ Sort Button
 Cards
 Expel Button
 
-- Screenshots of your project
+- Screenshots of project
 
 <a href="https://ibb.co/BqST0fx"><img src="https://i.ibb.co/XSvFcWg/Screen-Shot-2021-02-08-at-1-01-58-PM.png" alt="Screen-Shot-2021-02-08-at-1-01-58-PM" border="0"></a>
 
-- List of contributors and links to their GH profiles
+- List of contributors and links to GH profiles
 
 https://github.com/thedigitalmenagerie
 
-- Link to Loom video walkthrough of your app 
+- Link to Loom video walkthrough of application 
 
 https://www.loom.com/share/475ebb0bc7a144778d8315e8341071e3
