@@ -17,10 +17,21 @@ label {
 
 form {
   display: none;
-  margin-left: 650px;
-  text: center;
 }
 
 .card {
   background-color: black;
+}
+
+.centerBtn {
+  display: flex;
+}
+
+::placeholder {
+  color: goldenrod;
+}
+
+input[type=text] {
+  background-color: black;
+  border: goldenrod;
 }
