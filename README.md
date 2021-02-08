@@ -20,12 +20,13 @@ Upon load user will see a sorting hat button. Upon pressing the button, user wil
 
 - List of features
 
-Jumbotron
-Sorting Hat Button
-Form
-Sort Button
-Cards
-Expel Button
+Jumbotron,
+Sorting Hat Button,
+Required From,
+Error message, 
+Sort Button,
+Cards,
+ and Expel Button
 
 - Screenshots of project
 
