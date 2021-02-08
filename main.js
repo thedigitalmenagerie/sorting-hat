@@ -14,7 +14,7 @@ function formFunction () { // this is called onclick to toggle display from none
 const handleSortEvent = (e) => { // event handler function that contains the sort event and form validation function
   e.preventDefault(); // prevents the default of the page reloading
   const studentName = document.querySelector('#studentName').value; // declares studentName as equal to the value of what user entered
-  const uniqueIds = studentArray.map((firstyears) => firstyears.id).sort((a, b) => a -b) // declaring unique ids as equal to the student array that is pushed in the createStudent function, creating a new array and sorting them low to high
+  const uniqueIds = studentArray.map((firstyears) => firstyears.id) // declaring unique ids as equal to the student array that is pushed in the createStudent function, creating a new array 
    // array method that creates a new array from existing studentArray & applies a function to each of the elements
 
   const id = uniqueIds.length ? uniqueIds[uniqueIds.length -1] + 1: 1; // tenerary operator that assigns an id that is +1 of the last item in the array but makes an empty array's id 1
