@@ -12,6 +12,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
@@ -22,24 +24,28 @@
       <p class="mx-sm-5 flex-wrap">Half-giant jinxes peg-leg gillywater broken glasses large black dog Great Hall. Nearly-Headless Nick now string them together, and answer me this, which creature would you be unwilling to kiss?</p>
       <p class="lead">
         <div class="text-center">
-          <a class="btn btn-warning btn-lg" href="#" role="sortingHatButton" onclick="formFunction()">Sorting Hat</a>
+          <a class="btn btn-lg" href="#" role="sortingHatButton" onclick="formFunction()">Sorting Hat</a>
         </div>
-        
-      </p>
-    </div>
-    <div class="formValidation" id="formValidation"></div>
+      </p>    
+      <div class="formValidation" id="formValidation"></div>
     <form id="hiddenForm">
-      <div  class="form-group col-lg-2 text-center align-content-center">
+      <div class="form-group">
         <label for="studentName" class="form-label">Enter First Year's Name!</label>
         <input type="text" class="form-control" placeholder="Name" id="studentName">
-      </div>
-      <div class="centerBtn"><button type="submit" class="btn btn-warning mb-2" id="sortButton">Sort!</button></div>
+      <button type="submit" class="btn mb-2" id="sortButton">Sort!</button>   
+     <button type="submit" class="btn mb-2" id="organizeHouseButton">Sort by House</button>
+    <button type="submit" class="btn mb-2" id="organizeNameButton">Sort by Name</button>
+    </div>
     </form>
+
+     <div class="card-container d-flex text-center flex-row flex-wrap justify-content-around" id="studentCard"></div>
+     <div class="card-container d-flex text-center flex-row flex-wrap justify-content-around" id="expelledStudentCard"></div>
+    </div>
+
     
-    <div class="card d-flex text-center flex-row flex-wrap justify-content-around" id="studentCard"></div>
+   
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="main.js" async defer></script>
   </body>
 </html>
-s

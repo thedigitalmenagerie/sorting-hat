@@ -1,5 +1,7 @@
 const studentArray = []; // empty array that will hold domString elements from createStudentCards
 
+const expelledStudentArray = [];
+
 const hogHouse = ['Gryffindor', 'Slytherin', 'Hufflepuff', 'Ravenclaw']; // array that will be looped over and assigned at random with math funciton in handleSortEvent event handler 
 
 const printToDom = (divId, textToPrint) => { // print to dom function that will be called in various functions to dynamically display elements on the DOM
@@ -38,36 +40,69 @@ const handleSortEvent = (e) => { // event handler function that contains the sor
     };
     studentArray.push(nameIntoObj); // pushes this object as an item in the studentArray array
     createStudentCards(uniqueIds); // 
+    document.querySelector('form').reset();
   }
   
 };
 
+
 const createStudentCards = () => { // function that prints each nameIntoObj key value pair to student array and prints to dom in the empty studentCard div by calling a function on each element in an array in order and cannot be executed on an array elements without values
   let domString = '';
   studentArray.forEach((item, i) => { 
-  domString += `<div class="card mt-4 mb-4" style="width: 18rem;" id=${item.id}> 
+  domString += `<div class="card mt-4 mb-4 ${item.house.toLowerCase()}" style="width: 18rem;" id=${item.id}> 
     <div class="card-body">
-    <h3 class="card-title text-warning">First-Year Student: ${item.studentName}</h3>
-    <p class="card-text text-warning" id="house">Hogwarts House: ${item.house}</p>
-    <button href="#" class="btn btn-warning" type="button" id=${item.id}>Expel!</button>
+    <h3 class="card-title">First-Year Student: ${item.studentName}</h3>
+    <p class="card-text" id="house">Hogwarts House: ${item.house}</p>
+    <button href="#" class="btn" type="button" id=${item.id}>Expel!</button>
   </div>
 </div>`; // ${string/value.key}
   })
 
   printToDom('#studentCard', domString);
-};
+};//
 
-const expelStudent = (e) => { // function that will expel student with specific id that matches from the array when expel button is clicked
-  const targetType = e.target.type; // targets by type
-  const targetId = Number(e.target.id); // converts values to numbers
+const expelStudent = (e) => {
+  const targetType = e.target.type;
+  const targetId = Number(e.target.id);
+  if (targetType === 'button') {
+    const indexOfStudent = studentArray.findIndex((studentArray) => studentArray.id === targetId);
+    expelledStudentArray.push(...studentArray.splice(indexOfStudent, 1));
+  }  
+  createExpelledStudentCards(expelledStudentArray);
+  createStudentCards(studentArray);
+}
 
-    if (targetType === "button") { // targets type of button
-      const indexOfStudent = studentArray.findIndex((studentArray) => studentArray.id === targetId); // returns the index of the object you are trying to remove in the array
-      studentArray.splice(indexOfStudent, 1); // removes item and updates the array
-    }
-
-    createStudentCards(studentArray);
+  const createExpelledStudentCards = () => { // function that prints each nameIntoObj key value pair to student array and prints to dom in the empty studentCard div by calling a function on each element in an array in order and cannot be executed on an array elements without values
+    let domString = '';
+    expelledStudentArray.forEach((item, i) => { 
+    domString += `<div class="card mt-4 mb-4 voldemort" style="width: 18rem;" id=${item.id}> 
+      <div class="card-body">
+      <h3 class="card-title">Expelled Student: ${item.studentName}</h3>
+      <p class="card-text" id="house">Previous Hogwarts House: ${item.house}</p>
+      <p class="card-text" id="house">Now: Voldemort's Army</p>
+    </div>
+  </div>`; // ${string/value.key}
+    })
+  
+    printToDom('#expelledStudentCard', domString);
   };
+
+  const sortHouseButton = (e) => {
+    const buttonId = e.target.id;
+    if (buttonId === 'organizeHouseButton') {
+      studentArray.sort((a, b) => (a.house.toUpperCase() < b.house.toUpperCase() ? -1 : 1));
+      createStudentCards(studentArray);
+    } 
+  }
+
+  const sortNameButton = (e) => {
+    const buttonId = e.target.id;
+    if (buttonId === 'organizeNameButton') {
+      studentArray.sort((a, b) => (a.studentName.toUpperCase() < b.studentName.toUpperCase() ? -1 : 1));
+      createStudentCards(studentArray);
+    }
+  }
+
 
 
 const sortEvent = (e) => {
@@ -78,9 +113,15 @@ const expelStudentEvent = (e) => {
   document.querySelector('#studentCard').addEventListener('click', expelStudent);
 };
 
+const sortButtonEvent = (e) => {
+  document.querySelector('#organizeHouseButton').addEventListener('click', sortHouseButton);
+  document.querySelector('#organizeNameButton').addEventListener('click', sortNameButton);
+}
+
 const init = () => {
   sortEvent();
   expelStudentEvent();
+  sortButtonEvent();
 };
 
 init();
