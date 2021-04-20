@@ -1,37 +1,91 @@
 
 body {
-  background-color: black;
+  background-image: url(https://i.etsystatic.com/16495911/r/il/bde4d0/1358790642/il_1588xN.1358790642_p1vg.jpg);
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
-  color: goldenrod;
+  color: black;
 }
 
 p {
-  color: goldenrod;
+  color: black;
 }
 
 label {
-  color: goldenrod;
+  color: black;
 }
 
 form {
   display: none;
 }
 
+.jumbotron {
+  width: 70%;
+  background-color: goldenrod;
+  border-radius: 20px;
+  margin-top: 60px;
+}
+
 .card {
-  background-color: black;
+  background-color: goldenrod;
+  border-color: black;
+  border-radius: 10px;
 }
 
 .centerBtn {
   display: flex;
+  align-self: center;
 }
 
 ::placeholder {
-  color: goldenrod;
+}
+
+.btn {
+  background-color: brown;
+  align-self: center;
+}
+
+.alert {
+margin-left: 200px;
+margin-right: 200px;
+}
+
+#hiddenForm {
+  margin-left: 200px;
+  margin-right: 200px;
+  text-align: center;
+  align-items: center;
 }
 
 input[type=text] {
-  background-color: black;
-  border: goldenrod;
+  background-color: goldenrod;
+  color: brown;
+}
+
+body {
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=26747), auto;	
+  font-family: 'Cinzel', serif;
+}
+
+.gryffindor {
+  background-color: brown;
+}
+
+.slytherin {
+ background-color: darkgreen;
+}
+
+.hufflepuff {
+ background-color: goldenrod;
+}
+
+.ravenclaw {
+  background-color:darkblue;
+  color: whitesmoke;
+}
+
+.voldemort {
+  background-color: whitesmoke;
 }
